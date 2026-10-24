@@ -1,3 +1,10 @@
+@import url('./variables.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Second Css Session */
 
 /* Descendant Selector */
@@ -56,3 +63,117 @@
     background-attachment: fixed;
     background: url('../images/images.jfif') center fixed;
 } */
+
+/* Third Session */
+/* Linear Gradient */
+/* .box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    background-image: radial-gradient(red 50%, blue 1%, purple 20%, yellow 100%);
+} */
+
+/* Modular Css / @import */
+
+/* @import url('../styles/header.css');
+@import url('../styles/footer.css'); */
+
+/* Box Model Properties */
+/* .box{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 10px 20px 2px;
+    padding: 10px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    padding: 10px;
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    border: 10px solid red;
+    border-radius: 50%;
+} */
+
+/* .box{
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--border-color);
+    background-color: var(--box-color);
+    margin: calc(10px - 10px);
+    transition: 0.5s;
+} */
+/* .box:hover{
+    background-color: purple;
+    width: 500px;
+    padding: 500px;
+}
+a:hover{
+    color: green;
+}
+input:focus{
+    padding: 0 50px;
+} */
+
+/* 
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: var(--box-color);
+    color: white;
+}
+.box h5:last-child{
+    color: purple;
+} */
+
+
+body{
+    padding: 20px;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    margin: 0 10px 0;
+}
+.header .logo{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px 0;
+}
+
+.users-list{
+    background-color: #333;
+    margin: 30px 0 10px;
+    padding: 20px;
+    color: #fff;
+}
+.users-list table{
+    width: 100%;
+    height: 100%;
+}
+.users-list table td, th{
+    border: 1px solid #fff;
+}
+
+.users-list table tr:nth-child(even){
+    background-color: #fff;
+    color: #333;
+}
