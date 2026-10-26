@@ -132,7 +132,7 @@ input:focus{
 } */
 
 
-body{
+/* body{
     padding: 20px;
 }
 .header{
@@ -176,4 +176,32 @@ body{
 .users-list table tr:nth-child(even){
     background-color: #fff;
     color: #333;
+} */
+
+/* Fourth Session */
+.container{
+    width: 100%;
+    display: flex;
+    background-color: bisque;
+    height: 500px;
 }
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* flex-grow: 1; */
+    /* flex-basis: 400px; */
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    /* flex-grow: 2; */
+    /* flex-shrink: 4; */
+}
+/*.box3{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    flex-grow: 2;
+}*/
