@@ -1,0 +1,92 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    flex-direction: row-reverse;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-direction: row;
+}
+.header-pic{
+    width: 115px;
+    height:auto ;
+    cursor: pointer;
+}
+.search{
+    width: 400px;
+    height: 40px;
+    background-color: #f0f0f1;
+    border-radius: 8px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+.search i{
+    color: #81858b;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.search input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    text-align: right;
+    border-radius: 40px 40px 40px 40px;
+    
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.login{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+.login i{
+    margin-left: 5px;
+}
+.divider{
+    height: 25px;
+    border-left: 1px solid #ccc;
+}
+.bell{
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+.cart{
+    font-size: 22px;
+    cursor: pointer;
+    cursor: pointer;
+    
+}
