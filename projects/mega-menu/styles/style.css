@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    list-style: none;
+    display: flex;
+}
+.menu > li{
+    margin-right: 10px;
+    position: relative;
+    padding: 15px 0;
+}
+.menu li a{
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.menu li a:hover{
+    color: #9f9f9f;
+}
+.mega-menu{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #969696;
+    border-radius: 6px;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+    opacity: 0;
+}
+.menu li:hover .mega-menu{
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu > li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: green;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.menu li:hover:after{
+    width: 100%;
+}
+.menu > li:has(.nested-menu)::after{
+    display: none !important;
+}
+
+.nested-menu{
+    width: 180px;
+    height: 0;
+    border: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    border-radius: 0 0 6px 6px;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 8px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.nested-menu li{
+    display: none;
+}
+.menu:has(.nested-menu):hover .nested-menu{
+    height: 120px;
+    border: 1px solid #969696;
+    border-bottom: 3px solid green;
+}
+.menu:has(.nested-menu):hover .nested-menu li{
+    display: flex;
+    justify-content: space-between;
+}
+.nested-menu > li{
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.nested-menu > li:hover{
+    color: #999999;
+    transition: 0.2s;
+    transform: translateX(3px);
+}

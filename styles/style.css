@@ -179,7 +179,7 @@ input:focus{
 } */
 
 /* Fourth Session */
-.container{
+/* .container{
     width: 100%;
     display: flex;
     background-color: bisque;
@@ -189,19 +189,21 @@ input:focus{
     width: 100px;
     height: 100px;
     background-color: red;
-    /* flex-grow: 1; */
-    /* flex-basis: 400px; */
+    flex-grow: 1;
+    flex-basis: 400px;
 }
 .box2{
     width: 100px;
     height: 100px;
     background-color: blue;
-    /* flex-grow: 2; */
-    /* flex-shrink: 4; */
-}
+    flex-grow: 2;
+    flex-shrink: 4;
+} */
 /*.box3{
     width: 100px;
     height: 100px;
     background-color: yellow;
     flex-grow: 2;
 }*/
+
+/* Mega Menu Project */
