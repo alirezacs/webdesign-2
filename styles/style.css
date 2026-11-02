@@ -210,7 +210,7 @@ input:focus{
 
 
 /* Media Query */
-.header{
+/* .header{
     width: 100%;
     height: 80px;
     background-color: #d1d1d1;
@@ -297,5 +297,33 @@ input:focus{
     }
     .products .product{
         width: 100%;
+    }
+} */
+
+/* Animation in CSS */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* animation: myAnimation 2s infinite alternate; ShortCode */
+  /* animation-name: myAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate; */
+  position: absolute;
+}
+
+@keyframes myAnimation {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top: 50%;
+        left: 0;
+    }
+    100% {
+        top: 50%;
+        left: 50%;
     }
 }
