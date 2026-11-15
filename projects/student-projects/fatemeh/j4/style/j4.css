@@ -1,0 +1,17 @@
+
+
+.form{
+    border: 5px double black;
+    background-color: rgb(198, 212, 207);
+    box-sizing: border-box;
+    width: 200px;
+    height: 110px;
+    padding: 5px;
+    
+    
+    
+}
+.buten{
+    color: rgb(232, 150, 178);
+    display: block;
+}
