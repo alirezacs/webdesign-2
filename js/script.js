@@ -48,3 +48,22 @@
 //     console.log("Hello");
 //     i++;
 // }while(i < 100)
+
+/* Array In JS */
+// let users = ["Alireza", "Nozhan", "Sarina", "Reyhaneh"];
+// let usres2 = ["Jafar", "Mamad", "Asghar", "Ahmad"]
+// users.push("New User");
+// delete users[0];
+// users.toString()
+// users.concat(usres2)
+// Array.isArray(users)
+// users.join("-")
+// users.slice(1, 4)
+
+// console.log(Array.isArray(users));
+
+/* DOM in JS */
+// document.getElementById("h1").style.color = "blue";
+// document.getElementById("link").href = "https://google.com"
+
+// document.getElementById("box").innerHTML = "This is a Test Text";
