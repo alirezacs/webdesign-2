@@ -67,3 +67,50 @@
 // document.getElementById("link").href = "https://google.com"
 
 // document.getElementById("box").innerHTML = "This is a Test Text";
+
+/* Variable Scope */
+// let number = 10;
+// function sum(){
+//     console.log(number);
+// }
+
+// sum();
+
+/* DOM */
+/* Set or Remove Attribute */
+// let box = document.getElementById('box');
+// let image = document.getElementById('image');
+// box.setAttribute("style", "background-color: blue;")
+// image.setAttribute('src', './images/black-cls.jfif')
+
+/* ClassList */
+// console.log(box.classList);
+// btn.addEventListener('click', e => {
+//     if(image.classList.contains("hide")){
+//         image.classList.add('active');
+//         image.classList.remove('hide');
+//     }else{
+//         image.classList.add('hide');
+//         image.classList.remove('active');
+//     }
+// })
+
+/* Event Listener in JS */
+// let box = document.getElementById('box');
+// window.addEventListener('keydown', e => {
+//     console.log(e);
+// })
+
+
+// let list = document.getElementById('list');
+// let users = ["Alireza", "Nozhan", "Sarina", "Reyhaneh"];
+
+// users.map(user => {
+//     list.innerHTML += (li)
+// })
+let btn = document.getElementById('btn');
+
+btn.addEventListener('click', e => {
+    console.log(window.location.protocol);
+    
+})
