@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <h1>USER LAB<span>.</span></h1>
+    <p>Add a new user to your database.</p>
+
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Full name" required>
+        <input type="email" id="email" placeholder="Email address" required>
+        <input type="text" id="phone" placeholder="Phone number" required>
+
+        <button type="submit">Add user +</button>
+    </form>
+
+    <h2>Users <span id="count">0</span></h2>
+
+    <ul id="usersList"></ul>
+
+    <script src="./script/js.js"></script>
+</body>
+</html>
