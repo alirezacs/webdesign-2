@@ -328,9 +328,19 @@ input:focus{
     }
 } */
 
-.active{
+/* .active{
     display: block;
 }
 .hide{
     display: none;
+} */
+
+.timer{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -108,9 +108,65 @@
 // users.map(user => {
 //     list.innerHTML += (li)
 // })
-let btn = document.getElementById('btn');
 
-btn.addEventListener('click', e => {
-    console.log(window.location.protocol);
+
+// btn.addEventListener('click', e => {
+//     console.log(window.location.protocol);
     
-})
+// })
+
+/* setTimeout and setInterval */
+// let btn = document.getElementById('btn');
+// let reset = document.getElementById('reset');
+// let timer = document.getElementById('timer');
+// let timeOut = setTimeout(() => {
+//     console.log("Hello");
+// }, 2000);
+
+// clearTimeout(timeOut)
+// let miliSecond = 0;
+// let seconds = 0;
+// let minutes = 0;
+// let interval = setInterval(() => {
+//     miliSecond++;
+//     if(miliSecond === 100){
+//         miliSecond = 0;
+//         seconds++;
+//         if(seconds === 60){
+//             seconds = 0;
+//             minutes++;
+//         }
+//     }
+//     timer.innerText = `${minutes} : ${seconds} : ${miliSecond}`;
+// }, 10)
+
+// btn.addEventListener('click', e => {
+//     clearInterval(interval);
+// })
+// reset.addEventListener('click', e => {
+//     clearInterval(interval);
+//     miliSecond = 0;
+//     seconds = 0;
+//     minutes = 0;
+//     timer.innerText = `${minutes} : ${seconds} : ${miliSecond}`;
+// })
+
+// let sum = (n1, n2, callback) => {
+//     let result = n1 + n2;
+//     callback(result, poster);
+// }
+
+// let printer = (value, poster) => {
+//     console.log(value);
+//     document.write(value);
+//     poster()
+// }
+
+// sum(1, 1, printer);
+
+// setInterval(() => {}, 2000)
+
+// let getUsers = new Promise((resolve, rejected) => {
+//     resolve("Ba movafaghiat daryaft shod")
+//     rejected("khata");
+// })
