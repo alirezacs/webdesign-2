@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Auto Slider</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>CAR<span>ZONE</span></h2>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Models</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper">
+
+            <!-- BMW -->
+
+            <div class="swiper-slide">
+
+                <img src="images/bmw.jpg">
+
+                <div class="info-box">
+
+                    <h1>BMW M4</h1>
+
+                    <p>
+                        Experience the perfect combination
+                        of power, luxury and performance.
+                    </p>
+
+                    <a href="#">Explore More</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mercedes -->
+
+            <div class="swiper-slide"><img src="images/meacedes.jpg">
+
+                <div class="info-box">
+
+                    <h1>Mercedes AMG</h1>
+
+                    <p>
+                        Discover a new level of elegance
+                        and incredible driving experience.
+                    </p>
+
+                    <a href="#">Explore More</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Porsche -->
+
+            <div class="swiper-slide">
+
+                <img src="images/porsche.jpg">
+
+                <div class="info-box">
+
+                    <h1>Porsche 911</h1>
+
+                    <p>
+                        A timeless design combined with
+                        extraordinary speed and precision.
+                    </p>
+
+                    <a href="#">Explore More</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Audi -->
+
+            <div class="swiper-slide">
+
+                <img src="images/audi-r8-v10-black-uhd-4k-wallpaper.jpg">
+
+                <div class="info-box">
+
+                    <h1>Audi R8</h1>
+
+                    <p>
+                        Feel the power of engineering
+                        and the beauty of modern design.
+                    </p>
+
+                    <a href="#">Explore More</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+
+            loop: true,
+
+            effect: "fade",
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
+    </script>
+
+</body>
+
+</html>
