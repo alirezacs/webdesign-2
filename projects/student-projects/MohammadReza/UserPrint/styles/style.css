@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "pixel";
+    src: url("../fonts/PixelifySans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+body {
+    font-family: "pixel", sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f5f0ff, #e9ddff);
+    color: #30234a;
+    min-height: 100vh;
+    padding: 50px 16px;
+}
+
+.container {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #542b91;
+    letter-spacing: 0.5px;
+}
+
+.form-box,
+.users-box {
+    background: #ffffff;
+    padding: 26px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(91, 49, 150, 0.09);
+    margin-bottom: 24px;
+    border: 1px solid #eee6ff;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
+    color: #6236a0;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #55416f;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #ded2f2;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #30234a;
+    background-color: #fcfaff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    font-family: inherit;
+    color: #b2a5c5;
+}
+
+input:focus {
+    border-color: #8956d8;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(137, 86, 216, 0.12);
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #8956d8, #6636b2);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #7540c5, #542b9b);
+    box-shadow: 0 5px 15px rgba(102, 54, 178, 0.25);
+    transform: translateY(-2px);
+}
+
+#usersList {
+    list-style: none;
+}
+
+#usersList li {
+    background: #faf7ff;
+    border: 1px solid #e9def9;
+    border-left: 4px solid #8956d8;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 13px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+    color: #55416f;
+}
+
+#usersList li:last-child {
+    margin-bottom: 0;
+}

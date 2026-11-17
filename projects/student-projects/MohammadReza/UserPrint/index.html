@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>User Registration</h1>
+
+        <section class="form-box">
+            <h2>Create Form</h2>
+
+            <form id="userForm">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone">
+                </div>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+        <section class="users-box">
+            <h2>Users List</h2>
+
+            <ul id="usersList">
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+<script src="./js/script.js"></script>
+</html>
