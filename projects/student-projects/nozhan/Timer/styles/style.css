@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #080b1e, #17113b, #29145c);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    padding: 25px 35px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(125, 65, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    letter-spacing: 8px;
+    color: #ffffff;
+    text-shadow: 0 0 20px #925cff;
+}
+
+header span {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #a99bcf;
+}
+
+
+/* Main */
+
+main {
+    text-align: center;
+}
+
+
+/* Timer */
+
+.timer h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: #c8b5ff;
+    margin-bottom: 15px;
+}
+
+
+/* Circle */
+
+.circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid #9561ff;
+    box-shadow: 0 0 20px #8247ff,
+                inset 0 0 25px rgba(130, 71, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.circle span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 15px #a77aff;
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.controls button {
+    padding: 10px 22px;
+    margin: 4px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7845e8, #a15cff);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(140, 85, 255, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(165, 110, 255, 0.7);
+}
+
+
+/* Settings */
+
+.settings {
+    margin-top: 30px;
+}
+
+.settings h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #c8b5ff;
+    margin-bottom: 15px;
+}
+
+
+/* Inputs */
+
+.inputs {
+    margin-bottom: 12px;
+}
+
+.inputs input {
+    width: 75px;
+    padding: 10px 6px;
+    margin: 4px;
+    border: 1px solid #8054d9;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+}
+
+.inputs input:focus {
+    border-color: #bd9cff;
+    box-shadow: 0 0 12px #8752ff;
+}
+
+
+/* Set Time Button */
+
+#setTime {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #45217d;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+
