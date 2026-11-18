@@ -170,3 +170,60 @@
 //     resolve("Ba movafaghiat daryaft shod")
 //     rejected("khata");
 // })
+
+// let getProduct = productId => {
+
+// };
+
+// let registerOrder = (userId, getUser) => {
+//     // Check Login Status
+
+//     getUser(userId, getProduct);
+// }
+
+/* Promise */
+// let getUser = new Promise((resolve, rejected) => {
+//     // Send Request to Server for Get User Detail
+//     let statusCode = 404;
+//     if(statusCode === 200){
+//         resolve({ fName: "Alireza", phone: "09121111111", email: "alireza@gmail.com" });
+//     }else{
+//         rejected("Error in Connection");
+//     }
+// });
+
+// let getOrders = new Promise((resolve, rejected) => {
+
+// })
+
+// let openPayment = new Promise(res);
+
+// getUser.then((data) => {
+//     console.log("User Info Recived : ", data);
+
+//     getOrders.then(() => {
+//         openPayment.then
+//     })
+// }).catch(error => {
+//     console.log(error);
+// })
+
+/* Async And Await */
+// let getUser = async (id) => {
+//     let response = await fetch();
+
+//     console.log(response.email);
+// }
+
+/* Fetch */
+let getUsers = async () => {
+    let result = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    let data = await result.json();
+
+    console.log(data);
+    
+    
+}
+
+getUsers();
