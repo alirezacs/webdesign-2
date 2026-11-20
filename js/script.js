@@ -216,14 +216,29 @@
 // }
 
 /* Fetch */
-let getUsers = async () => {
-    let result = await fetch("https://jsonplaceholder.typicode.com/users");
+// let getUsers = async () => {
+//     let result = await fetch("https://jsonplaceholder.typicode.com/posts", {
+//         method: "POST",
+//         body: JSON.stringify({
+//             title: 'foo',
+//             body: 'bar',
+//             userId: 1,
+//         }),
+//         headers: {
+//             'Content-type': 'application/json; charset=UTF-8',
+//         },
+//     }); 
+// }
 
-    let data = await result.json();
+// getUsers();
 
-    console.log(data);
-    
-    
-}
+/* Localstorage */
+// let user = {
+//     firstName: "Alireza",
+//     email: "alireza@gmail.com"
+// }
+// let converted = JSON.stringify(user);
 
-getUsers();
+// localStorage.setItem("user", converted)
+let user = localStorage.getItem('user')
+console.log(JSON.parse(user));
