@@ -239,6 +239,36 @@
 // }
 // let converted = JSON.stringify(user);
 
-// localStorage.setItem("user", converted)
-let user = localStorage.getItem('user')
-console.log(JSON.parse(user));
+/* Ternary Operator */
+// let score = prompt("Enter Your Score: ");
+
+// if(score < 10){
+//     alert("Your Score is Under 10")
+// }else{
+//     alert("Your Score is Upper than 10")
+// }
+
+// (score < 10 || score < 15) ? alert("Your Score is Upper than 10") : alert("Your Score is Under 10")
+
+/* Array Destructring */
+// let users = ["A", "M", "J", "A"]
+// let [first, second, third] = users;
+
+/* Object Destructring */
+// let user = {
+//     firstName: "Alireza",
+//     lastName: "Mardani",
+//     age: 22,
+//     email: "alireza@gmail.com"
+// }
+// let { firstName: fullName, lastName } = user;
+// console.log(fullName, lastName);
+
+/* Break And Continue */
+// for(let i = 0; i < 20; i++){
+//     if(i === 15){
+//         continue;
+//         break;
+//     }
+//     console.log(i);
+// }
