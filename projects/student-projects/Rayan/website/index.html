@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <title>Raran Sport| فروشگاه ورزشی</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            RAYAN <span>SPORT</span>
+        </div>
+        <nav class="menu">
+            <a href="#">صفحه اصلی</a>
+            <a href="#"> فروشگاه</a>
+            <a href="#">پوشاک مردانه</a>
+            <a href="#">کفش</a>
+            <a href="#">تجهیزات ورزشی</a>
+            <a href="#">درباره ما</a>
+        </nav>
+        <div class="header-icons">
+            <input type="text" placeholder="جستجو در فروشگاه">
+            <button>🛒</button>
+            <button>ورود</button>
+        </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+
+     <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./images/bannre1.png" alt="Sports bannre1">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/banner2.png" alt="Sports banner2">
+        </div>
+        <div class="swiper-slide">
+            <img src="./images/banner3.png" alt="Sport banner3">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+
+    <SEction class="categories">
+        <h2>دسته بندی محصولات</h2>
+        <div class="category-container">
+            <div class="category">
+                <img src="./images/clothes.jpg" alt="لباس ورزشی">
+                <p>لباس ورزشی</p>
+            </div>
+            <div class="category">
+                <img src="./images/shoes.jpg" alt="کفش ورزشی">
+                <p>کفش ورزشی</p>
+            </div>
+            <div class="category">
+                <img src="./images/supplements.jpg" alt="مکمل ورزشی">
+                <p>مکمل ورزشی</p>
+            </div>
+            <div class="category">
+                <img src="./images/equipments.jpg" alt="تجهیزات بدنسازی">
+                <p>تجهیزات بدنسازی</p>
+            </div>
+            <div class="category">
+                <img src="./images/shoes.jpg" alt="کیف ورزشی">
+                <p>کیف ورزشی</p>
+            </div>
+            <div class="category">
+                <img src="./images/accessories.jpg" alt="لوازم جانبی">
+                <p>لوازم جانبی</p>
+            </div>
+         </div>
+    </SEction>
+
+
+    <section class="products">
+        <div class="products-header">
+            <h2>محصولات پر فروش</h2>
+                <p>جدید ترین محصولات ورزشی RAYAN SPORT</p>
+                <!-- products -->
+         <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                        <img src="./images/products.png" alt="کفش ورزشی">
+                        <span class="product-bsdge">پر فروش</span>
+                </div>
+
+                <div class="product-info">
+                    <h3>کفش ورزشی مردانه</h3>
+                    <p>مناسب تمرین و دویدن</p>
+                    <div class="product-price"> 
+                        <span>2.500.000تومان</span>
+                    </div>
+                    <button class="product-btn">مشاهده محصول</button>
+            </div>
+         </div>
+
+                <!-- product2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="./images/products2.png" alt="تیشرت ورزشی">
+                 <span class="product-badge">جدید</span>
+            </div>
+            <div class="product-info">
+                <h3>تیشرت ورزشی مردانه</h3>
+                    <p>مناسب تمرین باشگاه</p>
+                <div class="product-price">
+                    <span>850.000نومان</span>
+                </div>
+                <button class="product-btn">مشاهده محصول</button>
+            </div>
+        </div>
+
+
+        <!-- product3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="./images/products3.png" alt="دمبل بدنسازی">
+                <span class="product-badge">ویژه</span>
+            </div>
+
+            <div class="product-info">
+                <h3>دمبل بدنسازی</h3>
+                <p>مناسب تمرین در خانه</p>
+
+                <div class="product-price">
+                    <span>1.200.000نومان</span>
+                </div>
+                 <button class="product-btn">مشاهده محصول</button>
+            </div>
+         </div>
+
+
+
+
+         <!-- product4 -->
+          <div class="product-card">
+            <div class="product-image">
+                <img src="./images/products1.png" alt="شلوار ورزشی">
+                <span class="product-badge">پر فروش</span>
+            </div>
+
+            <div class="product-info">
+                <h3>شلوار ورزشی مردانه</h3>
+                <p>راحت و مناسب تمرین</p>
+                <div class="product-price">
+                    <button class="product-btn">مشاهده محصول</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  special offer section -->
+
+    <section class=" special-offer">
+        <div class="offer-content">
+            <span class="offer-lable">پیشنهاد ویژه</span>
+            <h2>تا 30% تخفیف</h2>
+            <p>روی جدید ترین محصولات ورزشی RAYAN SPORT</p>
+            <button class="offer-btn">مشاهده تخفیف ها</button>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        const offer = document.querySelector(".special-offer");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+       });
+    });
+
+            observer.observe(offer);
+    </script>
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>RAYAN <span>SPORT</span></h2>
+            <P>فروشگاه تخصصی پوشاک و تجهیزات ورزشی برای ساختن بهترین نسخه از خودت</P>
+        </div>
+        <div class="footer-links">
+            <h3>دسترسی سریع</h3>
+
+            <a href="#">صفحه اصلی</a>
+            <a href="#">محصولات</a>
+            <a href="#">تخفیف ها</a>
+            <a href="#">تماس با ما</a>
+        </div>
+        <div class="footer-contact">
+           <h3>ارتباط با ما</h3>
+
+             <p>📞09378587338</p>
+             <p>📧@rayansport.com</p>
+             <p>📍ایران,کرج</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+          <p>:copyright: 2026 RAYAN SPORT | تمامی حقوق محفوظ است.</p>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100VH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #101b38, #050711 70%);
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+}
+
+
+.timer-container{
+    width: 450px;
+    padding: 50px 35px;
+    text-align: center;
+    background: rgba(10, 18, 40, 0.75);
+    border: 1px solid rgba(0, 238, 255, 0.35);
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(0, 238, 255, 0.12) inset 0 0 25px rgba(0, 238, 255, 0.05);
+    backdrop-filter: blur(15px);
+}
+
+
+h1 {
+    color: #00eeff;
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #00eeff,
+     0 0 25px #00eeff;
+}
+
+.subtitle {
+    color: #7788aa;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+
+.timer-box {
+    margin: 45px 0;
+    padding: 25px 10px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 238, 255, 0.2);
+}
+
+.timer-box span {
+    color: #00eeff;
+    font-size: 65px;
+    font-weight: 800;
+    text-shadow: 0 0 10px #00eeff,
+     0 0 25px #00eeff,
+     0 0 45px #008cff;
+}
+
+
+.timer-box .colon {
+    color: #a855f7;
+    text-shadow: 0 0 15px #a855f7;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#start {
+    background: #00ff99;
+    color: #001b12;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+}
+
+#stop {
+    background: #ff3864;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 56, 100, 0.4);
+}
+
+
+#reset {
+    background: #a855f7;
+    color: white;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+button:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.status {
+    margin-top: 30px;
+    color: #00eeff;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    .timer-container {
+        width: 90%;
+        padding: 35px 20px;
+    }
+
+    .timer-box span {
+        font-size: 48px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 9px;
+    }
+}
+

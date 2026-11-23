@@ -170,3 +170,105 @@
 //     resolve("Ba movafaghiat daryaft shod")
 //     rejected("khata");
 // })
+
+// let getProduct = productId => {
+
+// };
+
+// let registerOrder = (userId, getUser) => {
+//     // Check Login Status
+
+//     getUser(userId, getProduct);
+// }
+
+/* Promise */
+// let getUser = new Promise((resolve, rejected) => {
+//     // Send Request to Server for Get User Detail
+//     let statusCode = 404;
+//     if(statusCode === 200){
+//         resolve({ fName: "Alireza", phone: "09121111111", email: "alireza@gmail.com" });
+//     }else{
+//         rejected("Error in Connection");
+//     }
+// });
+
+// let getOrders = new Promise((resolve, rejected) => {
+
+// })
+
+// let openPayment = new Promise(res);
+
+// getUser.then((data) => {
+//     console.log("User Info Recived : ", data);
+
+//     getOrders.then(() => {
+//         openPayment.then
+//     })
+// }).catch(error => {
+//     console.log(error);
+// })
+
+/* Async And Await */
+// let getUser = async (id) => {
+//     let response = await fetch();
+
+//     console.log(response.email);
+// }
+
+/* Fetch */
+// let getUsers = async () => {
+//     let result = await fetch("https://jsonplaceholder.typicode.com/posts", {
+//         method: "POST",
+//         body: JSON.stringify({
+//             title: 'foo',
+//             body: 'bar',
+//             userId: 1,
+//         }),
+//         headers: {
+//             'Content-type': 'application/json; charset=UTF-8',
+//         },
+//     }); 
+// }
+
+// getUsers();
+
+/* Localstorage */
+// let user = {
+//     firstName: "Alireza",
+//     email: "alireza@gmail.com"
+// }
+// let converted = JSON.stringify(user);
+
+/* Ternary Operator */
+// let score = prompt("Enter Your Score: ");
+
+// if(score < 10){
+//     alert("Your Score is Under 10")
+// }else{
+//     alert("Your Score is Upper than 10")
+// }
+
+// (score < 10 || score < 15) ? alert("Your Score is Upper than 10") : alert("Your Score is Under 10")
+
+/* Array Destructring */
+// let users = ["A", "M", "J", "A"]
+// let [first, second, third] = users;
+
+/* Object Destructring */
+// let user = {
+//     firstName: "Alireza",
+//     lastName: "Mardani",
+//     age: 22,
+//     email: "alireza@gmail.com"
+// }
+// let { firstName: fullName, lastName } = user;
+// console.log(fullName, lastName);
+
+/* Break And Continue */
+// for(let i = 0; i < 20; i++){
+//     if(i === 15){
+//         continue;
+//         break;
+//     }
+//     console.log(i);
+// }

@@ -1,0 +1,127 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0c0c14;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.timer-card {
+    width: 100%;
+    max-width: 480px;
+    background: #191925;
+    border: 1px solid #303044;
+    border-radius: 28px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 20px 70px #00000055;
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #aaa2c8;
+}
+
+.logo span {
+    color: #9872ff;
+}
+
+h1 {
+    font-size: 27px;
+    margin-top: 45px;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    direction: ltr;
+}
+
+.timer span:not(.colon) {
+    font-size: 65px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -3px;
+}
+
+.colon {
+    font-size: 45px;
+    color: #9872ff;
+    margin-top: -10px;
+}
+
+.labels {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 12px;
+    color: #77778c;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 45px;
+}
+
+button {
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+#start_btn {
+    padding: 0 35px;
+    background: linear-gradient(120deg, #936bff, #637bff);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#stop_btn, #reset_btn {
+    width: 50px;
+    background: #303044;
+    color: white;
+    font-size: 18px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
+
+@media (max-width: 400px) {
+    .timer-card {
+        padding: 35px 15px;
+    }
+
+    .timer span:not(.colon) {
+        font-size: 48px;
+    }
+
+    .labels {
+        gap: 30px;
+    }
+}

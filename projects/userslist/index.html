@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Dashboard</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>Users</h1>
+            <p>Manage and view your users</p>
+        </div>
+        <button class="add-btn">+ Add User</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th>Website</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="list">
+                <tr>
+                    <td>
+                        <div class="user-info">
+                            <div class="avatar">LG</div>
+                            <div>
+                                <strong>Leanne Graham</strong>
+                                <small>ID: #1</small>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span class="username">@Bret</span>
+                    </td>
+
+                    <td>
+                        <a href="mailto:Sincere@april.biz">
+                            Sincere@april.biz
+                        </a>
+                    </td>
+
+                    <td>
+                        <strong>Gwenborough</strong>
+                        <small>Kulas Light, Apt. 556</small>
+                    </td>
+
+                    <td>1-770-736-8031</td>
+
+                    <td>
+                        <strong>Romaguera-Crona</strong>
+                        <small>Client-server solutions</small>
+                    </td>
+
+                    <td>
+                        <a href="https://hildegard.org" target="_blank">
+                            hildegard.org
+                        </a>
+                    </td>
+
+                    <td>
+                        <div class="actions">
+                            <button class="view" title="View">👁</button>
+                            <button class="edit" title="Edit">✏️</button>
+                            <button class="delete" title="Delete">🗑</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+<script src="./js/script.js"></script>
+</html>
