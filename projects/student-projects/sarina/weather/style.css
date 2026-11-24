@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #080d18;
+    color: #f3f6ff;
+    min-height: 100vh;
+    padding: 35px 18px;
+    background-image:
+        radial-gradient(ellipse at 15% 5%, #172b50 0, transparent 40%),
+        radial-gradient(ellipse at 90% 55%, #171536 0, transparent 38%);
+}
+
+.weather {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.logo span,
+.footer span {
+    color: #71c9ff;
+}
+
+.tagline,
+.small,
+.section-title span {
+    color: #8391ad;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.search {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 8px 8px 18px;
+    background: #131c2d;
+    border: 1px solid #293750;
+    border-radius: 16px;
+}
+
+.search-icon {
+    font-size: 26px;
+    color: #8190ad;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font: inherit;
+}
+
+.search input::placeholder {
+    color: #77849d;
+}
+
+.search button {
+    background: #79c9fa;
+    color: #08111e;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: #a0dcff;
+}
+
+.message {
+    color: #8795ae;
+    font-size: 12px;
+    margin: 12px 5px 0;
+}
+
+.current {
+    padding: 32px;
+    border: 1px solid #344967;
+    border-radius: 24px;
+    background: linear-gradient(120deg, #182b49, #172037 65%, #20203d);
+    box-shadow: 0 20px 60px #00000025;
+    margin-bottom: 35px;
+}
+
+.location,
+.temperature,
+.high-low,
+.section-title,
+.sun-card {
+    display: flex;
+    align-items: center;
+}
+
+.location,
+.section-title {
+    justify-content: space-between;
+}
+
+.location h1 {
+    font-size: 27px;
+    margin: 10px 0;
+}
+
+.location #date {
+    color: #a2afc8;
+    font-size: 13px;
+}
+
+.weather-icon {
+    font-size: 65px;
+}
+
+.temperature {
+    gap: 25px;
+    margin: 30px 0 15px;
+}
+
+.temperature h2 {
+    font-size: 90px;
+    line-height: 1;
+    letter-spacing: -6px;
+}
+
+.degree {
+    color: #83cfff;
+}
+
+.temperature p {
+    color: #c4cee1;
+    margin-bottom: 8px;
+}
+
+.temperature #condition {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.temperature .feels {
+    font-size: 13px;
+}
+
+.high-low {
+    gap: 20px;
+    color: #aebdd5;
+    font-size: 13px;
+}
+
+.details,
+.sun,
+.forecast {
+    margin-bottom: 38px;
+}
+
+.section-title {
+    margin-bottom: 18px;
+}
+
+.section-title h3 {
+    font-size: 19px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.card,
+.sun-card,
+.hour {
+    background: #111a2a;
+    border: 1px solid #202e45;
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover,
+.sun-card:hover,
+.hour:hover {
+    transform: translateY(-3px);
+    border-color: #527da7;
+}
+
+.detail-icon {
+    font-size: 23px;
+}
+
+.card p,
+.sun-card p,
+.hour p {
+    color: #8f9db7;
+    font-size: 12px;
+    margin: 13px 0 8px;
+}
+
+.card h4,
+.sun-card h4,
+.hour h4 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.card small {
+    color: #8f9db7;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sun-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.sun-card {
+    gap: 18px;
+    padding: 22px;
+}
+
+.sun-card p {
+    margin: 0 0 9px;
+}
+
+.sun-icon {
+    font-size: 30px;
+}
+
+.hour-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.hour {
+    padding: 17px 8px;
+    text-align: center;
+}
+
+.hour p {
+    margin: 0 0 15px;
+}
+
+.hour span {
+    font-size: 27px;
+}
+
+.hour h4 {
+    margin-top: 12px;
+}
+
+.tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 25px;
+    border: 1px solid #34405e;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #17243b, #201d3b);
+    margin-bottom: 40px;
+}
+
+.tip > span {
+    color: #80d2ff;
+    font-size: 28px;
+}
+
+.tip p {
+    color: #98a7c1;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.tip h3 {
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #697790;
+    font-size: 11px;
+    padding: 20px 0;
+    border-top: 1px solid #202a3d;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 22px 14px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .tagline {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .current {
+        padding: 22px 18px;
+    }
+
+    .location h1 {
+        font-size: 21px;
+    }
+
+    .weather-icon {
+        font-size: 48px;
+    }
+
+    .temperature {
+        gap: 15px;
+    }
+
+    .temperature h2 {
+        font-size: 68px;
+    }
+
+    .temperature #condition {
+        font-size: 16px;
+    }
+
+    .detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .sun-grid {
+        gap: 10px;
+    }
+
+    .sun-card {
+        padding: 16px 12px;
+        gap: 10px;
+    }
+
+    .sun-icon {
+        font-size: 24px;
+    }
+
+    .sun-card h4 {
+        font-size: 19px;
+    }
+
+    .hour-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .search-box {
+        gap: 8px;
+        padding-left: 12px;
+    }
+
+    .search button {
+        padding: 12px;
+    }
+
+    .section-title h3 {
+        font-size: 16px;
+    }
+
+    .section-title span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+
+

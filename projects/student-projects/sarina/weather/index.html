@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="weather">
+
+        <header class="header">
+            <a href="#" class="logo">weather<span>.</span></a>
+            <p class="tagline">WEATHER INTELLIGENCE</p>
+        </header>
+
+        <section class="search">
+            <div class="search-box">
+                <span class="search-icon">⌕</span>
+                <input type="text" id="city" placeholder="Search a city..." autocomplete="off">
+                <button id="search">Search</button>
+            </div>
+            <p class="message" id="message">Discover the weather around the world.</p>
+        </section>
+
+        <section class="current">
+            <div class="location">
+                <div>
+                    <p class="small">CURRENT LOCATION</p>
+                    <h1 id="name">Tehran, Iran</h1>
+                    <p id="date">Your daily weather overview</p>
+                </div>
+                <div class="weather-icon" id="icon">☀️</div>
+            </div>
+
+            <div class="temperature">
+                <h2><span id="temp">--</span><span class="degree">°</span></h2>
+                <div>
+                    <p id="condition">Waiting for weather</p>
+                    <p class="feels">Feels like <span id="feels">--</span>°</p>
+                </div>
+            </div>
+
+            <div class="high-low">
+                <span>↑ <span id="high">--</span>° High</span>
+                <span>↓ <span id="low">--</span>° Low</span>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="section-title">
+                <h3>Weather Details</h3>
+                <span>LIVE CONDITIONS</span>
+            </div>
+
+            <div class="detail-grid">
+                <article class="card">
+                    <span class="detail-icon">💧</span>
+                    <p>Humidity</p>
+                    <h4><span id="humidity">--</span><small>%</small></h4>
+                </article>
+
+                <article class="card">
+                    <span class="detail-icon">💨</span>
+                    <p>Wind Speed</p>
+                    <h4><span id="wind">--</span><small> km/h</small></h4>
+                </article>
+
+                <article class="card">
+                    <span class="detail-icon">🌧️</span>
+                    <p>Rain Chance</p>
+                    <h4><span id="rain">--</span><small>%</small></h4>
+                </article>
+
+                <article class="card">
+                    <span class="detail-icon">☀️</span>
+                    <p>UV Index</p>
+                    <h4><span id="uv">--</span></h4>
+                </article>
+
+                <article class="card">
+                    <span class="detail-icon">🌡️</span>
+                    <p>Pressure</p>
+                    <h4><span id="pressure">--</span><small> hPa</small></h4>
+                </article>
+
+                <article class="card">
+                    <span class="detail-icon">👁️</span>
+                    <p>Visibility</p>
+                    <h4><span id="visibility">--</span><small> km</small></h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="sun">
+            <div class="section-title">
+                <h3>Sun & Sky</h3>
+                <span>DAILY CYCLE</span>
+            </div>
+
+            <div class="sun-grid">
+                <article class="sun-card">
+                    <div class="sun-icon">🌅</div>
+                    <div>
+                        <p>Sunrise</p>
+                        <h4 id="sunrise">--:--</h4>
+                    </div>
+                </article>
+
+                <article class="sun-card">
+                    <div class="sun-icon">🌇</div>
+                    <div>
+                        <p>Sunset</p>
+                        <h4 id="sunset">--:--</h4>
+                    </div>
+                </article>
+
+                <article class="sun-card">
+                    <div class="sun-icon">🌤️</div>
+                    <div>
+                        <p>Daylight</p>
+                        <h4 id="daylight">-- h</h4>
+                    </div>
+                </article>
+
+                <article class="sun-card">
+                    <div class="sun-icon">☁️</div>
+                    <div>
+                        <p>Cloud Cover</p>
+                        <h4 id="clouds">--%</h4>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="forecast">
+            <div class="section-title">
+                <h3>Next 24 Hours</h3>
+                <span>HOURLY FORECAST</span>
+            </div>
+
+            <div class="hour-list" id="hours">
+                <div class="hour">
+                    <p>Now</p>
+                    <span>🌤️</span>
+                    <h4>--°</h4>
+                </div>
+                <div class="hour">
+                    <p>+3h</p>
+                    <span>☀️</span>
+                    <h4>--°</h4>
+                </div>
+                <div class="hour">
+                    <p>+6h</p>
+                    <span>☁️</span>
+                    <h4>--°</h4>
+                </div>
+                <div class="hour">
+                    <p>+9h</p>
+                    <span>🌧️</span>
+                    <h4>--°</h4>
+                </div>
+                <div class="hour">
+                    <p>+12h</p>
+                    <span>🌤️</span>
+                    <h4>--°</h4>
+                </div>
+                <div class="hour">
+                    <p>+15h</p>
+                    <span>☀️</span>
+                    <h4>--°</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="tip">
+            <span>✦</span>
+            <div>
+                <p>ATMOS DAILY INSIGHT</p>
+                <h3 id="tip">Your day, written in the sky.</h3>
+                <p id="advice">Search a city to discover your weather.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>ATMOS<span>.</span> — A clearer view of your world.</p>
+            <p>Weather data powered by Open-Meteo</p>
+        </footer>
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
