@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER — Weather Beyond Borders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="aurora one"></div>
+    <div class="aurora two"></div>
+    <div class="particles" id="particles"></div>
+    <main class="page">
+        <header class="topbar">
+            <div class="brand">★ WEADER<span>.</span></div>
+            <div class="top-note">WEATHER · WORLDWIDE</div>
+        </header>
+        <section class="hero">
+            <p class="eyebrow">THE WORLD, IN EVERY WEATHER</p>
+            <h1>Find your atmosphere.</h1>
+            <p class="subtitle">A little closer to the sky, wherever you are.</p>
+            
+            <form class="search-wrap" id="searchForm">
+                <span class="search-symbol">⌕</span>
+                <input id="cityInput" type="text" placeholder="Search any city in the world..." autocomplete="off"
+                    required>
+                <button id="searchButton" type="submit">Explore&nbsp; →</button>
+            </form>
+            <p class="hint">Try a city name — London, Tokyo, Baku…</p>
+            <div class="city-options" id="cityOptions"></div>
+            <p id="status" role="status"></p>
+        </section>
+
+        <section class="weather-panel" id="weatherPanel">
+            <div class="current-card">
+                <div class="current-top">
+                    <div>
+                        <p class="section-label">CURRENT CONDITIONS</p>
+                        <h2 class="city-name" id="cityName">City</h2>
+                        <p class="country-name" id="countryName">Country</p>
+                        <p class="condition" id="condition">—</p>
+                    </div>
+                    <div class="temperature-block"><span class="main-icon" id="mainIcon">☀️</span>
+                        <div class="temperature"><span id="temperature">--</span><sup>°C</sup></div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <p class="detail-title">FEELS LIKE</p><strong class="detail-value" id="feelsLike">--°C</strong>
+                </div>
+                <div class="detail-card">
+                    <p class="detail-title">HUMIDITY</p><strong class="detail-value" id="humidity">--%</strong>
+                </div>
+                <div class="detail-card">
+                    <p class="detail-title">WIND SPEED</p><strong class="detail-value" id="windSpeed">-- km/h</strong>
+                </div>
+                <div class="detail-card">
+                    <p class="detail-title">PRECIPITATION</p><strong class="detail-value" id="precipitation">--
+                        mm</strong>
+                </div>
+            </div>
+            <section class="forecast-section">
+                <div class="section-heading">
+                    <h3>Hourly forecast</h3><span>NEXT HOURS</span>
+                </div>
+                <div class="hourly-list" id="hourlyList"></div>
+                <div class="section-heading">
+                    <h3>7-day forecast</h3><span>THE WEEK AHEAD</span>
+                </div>
+                <div class="daily-list" id="dailyList"></div>
+            </section>
+            <div class="sun-times"><span>☀ Sunrise <strong id="sunrise">--:--</strong></span><span>☾ Sunset <strong
+                        id="sunset">--:--</strong></span><span>UV max <strong id="uvIndex">--</strong></span></div>
+            <p class="updated" id="updatedText"></p>
+        </section>
+        <footer>EVERY SKY HAS A STORY ★ EXPLORE THE SKY, EVERYWHERE</footer>
+    </main>
+ <script src="script/script.js"></script>
+
+</body>
+
+</html>
