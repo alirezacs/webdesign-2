@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky | Weather</title>
+    <link rel="stylesheet" href="./style/j8.css">
+</head>
+
+<body>
+
+    
+    <video class="sky" id="sky" autoplay muted loop playsinline
+        src="./videos/day-clear.mp4"></video>
+
+    <div class="dark-layer"></div>
+
+    <main class="container">
+
+        <header class="header">
+            <form class="search" id="form">
+                <input
+                    type="text"
+                    id="cityinput"
+                    placeholder="Enter city name..."
+                >
+                <button type="submit">⌕</button>
+            </form>
+        </header>
+
+        <section class="main-content">
+
+            <div class="weather-info">
+
+                <h1 id="city">Weather</h1>
+                <p id="country">Search for a city to begin</p>
+
+                <div class="temperature">
+                    <span id="temp">--</span>
+                    <span class="degree">°</span>
+                </div>
+
+                <p class="weather-description" id="description">
+                    Enter a city name to see the weather
+                </p>
+
+                <div class="sun-info">
+
+                    <div>
+                        <span class="sun-icon">↑</span>
+                        <p>Sunrise</p>
+                        <h3 id="sunrise">--:--</h3>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div>
+                        <span class="sun-icon">↓</span>
+                        <p>Sunset</p>
+                        <h3 id="sunset">--:--</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="details">
+
+                <div class="detail">
+                    <p>Feels like</p>
+                    <h3 id="feels">--°</h3>
+                </div>
+
+                <div class="detail">
+                    <p>Humidity</p>
+                    <h3 id="humidity">--%</h3>
+                </div>
+
+                <div class="detail">
+                    <p>Wind speed</p>
+                    <h3 id="wind">--</h3>
+                </div>
+
+                <div class="detail">
+                    <p>Sky condition</p>
+                    <h3 id="sky-status">--</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+   
+
+</body>
+
+ <script src="./js/j8.js"></script>
+</html>

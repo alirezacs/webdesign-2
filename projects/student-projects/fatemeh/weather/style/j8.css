@@ -1,0 +1,223 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #26384a;
+}
+
+/* Background video */
+
+.sky {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Dark layer */
+
+.dark-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.05) 40%,
+        rgba(0, 0, 0, 0.55)
+    );
+}
+
+/* Main content */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    padding: 35px 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Search form */
+
+.search {
+    width: 280px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    padding: 0 15px;
+    font-family: inherit;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search button {
+    width: 50px;
+    height: 100%;
+
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* Weather information */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1;
+    padding-top: 30px;
+}
+
+.weather-info {
+    margin-bottom: 35px;
+}
+
+#city {
+    font-size: 42px;
+    font-weight: normal;
+}
+
+#country {
+    margin-top: 5px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.temperature {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+#temp {
+    font-size: 100px;
+    line-height: 1;
+}
+
+.degree {
+    font-size: 45px;
+    margin-top: 8px;
+}
+
+.weather-description {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* Sunrise and sunset */
+
+.sun-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.sun-info p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.sun-info h3 {
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.sun-icon {
+    font-size: 22px;
+}
+
+.line {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Extra details */
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.detail {
+    min-width: 150px;
+    padding: 18px 22px;
+
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+}
+
+.detail p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.detail h3 {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+
