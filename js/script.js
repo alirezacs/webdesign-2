@@ -337,30 +337,66 @@
 // console.log(sadeghi);
 
 /* Overriding */
-class Product{
-    title
-    price
+// class Product{
+//     title
+//     price
 
-    buyProduct(){
-        console.log("Buy a Product");
-    }
-}
+//     buyProduct(){
+//         console.log("Buy a Product");
+//     }
+// }
 
-class Mobile extends Product{
-    buyProduct(){
-        console.log("Buy a Mobile");
-    }
-}
+// class Mobile extends Product{
+//     buyProduct(){
+//         console.log("Buy a Mobile");
+//     }
+// }
 
-let mobile = new Mobile();
-mobile.buyProduct();
+// let mobile = new Mobile();
+// mobile.buyProduct();
 
 
-class FilimoPlan extends Product{
-    buyProduct(){
-        console.log("Buy a Plan");
-    }
-}
+// class FilimoPlan extends Product{
+//     buyProduct(){
+//         console.log("Buy a Plan");
+//     }
+// }
 
-let plan = new FilimoPlan();
-plan.buyProduct();
+// let plan = new FilimoPlan();
+// plan.buyProduct();
+
+/* Abstraction */
+// class Car{
+//     jaragheh(){
+
+//     }
+
+//     #addFuel(){
+
+//     }
+    
+//     start(){
+//         this.#addFuel();
+
+//         this.#jaragheh();
+
+//         console.log("Car Started!");
+//     }
+// }
+
+/* Axios */
+// axios.post('https://jsonplaceholder.typicode.com/posts', {
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+// }, {
+//     headers: {
+//         'Content-Type': 'application/json',
+//     }
+// })
+//     .then(response => {
+//         console.log(response.data);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
