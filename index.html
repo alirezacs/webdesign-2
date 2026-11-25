@@ -1,247 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>با سلام</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هواشناسی من</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="header">
-  <div class="container header-in">
-    <div class="logo">با سلام</div>
-    <div class="search">جستجو در با سلام</div>
-    <a href="#" class="head-btn">انتخاب شهر</a>
-    <a href="#" class="head-btn">سبد خرید</a>
-    <a href="#" class="head-btn">ورود / ثبت‌نام</a>
-  </div>
-</div>
+    <div class="weather-box">
+        <h1>هواشناسی</h1>
 
-<div class="menu">
-  <div class="container menu-in">
-    <a href="#">دسته‌بندی‌ها</a>
-    <a href="#">تخفیف‌ها</a>
-    <a href="#">پوشاک</a>
-    <a href="#">خوراکی</a>
-    <a href="#">لوازم آشپزخانه</a>
-    <a href="#">لوازم آرایشی</a>
-    <a href="#">طلا و جواهر</a>
-    <a href="#">گفت‌وگوها</a>
-    <a href="#">حساب من</a>
-  </div>
-</div>
+        <input type="text" id="city" placeholder="نام شهر را وارد کن">
 
-<div class="container">
+        <button id="searchBtn">جستجو</button>
 
-  <div class="box stories">
-    <div class="story"><div class="circle new"><img src="https://statics.basalam.com/public-132/admin/7PQmB8/09-25/46CI8sY9xYZ0dJrMBlDZBTC7rcZU83FQMIdCTZa8IMQo5FfpIU.png" alt="ویدئوها"></div>ویدئوها</div>
-    <div class="story"><div class="circle"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNwqsBXYzbL3shp2OS0YNwGLSe6tpMPlBuGfpIjJw2g&s=10" alt="گالری نور"></div>گالری نور</div>
-    <div class="story"><div class="circle"><img src="https://umagcdn.utravs.com/uploads/2023/02/umag-isfahan-handscraft-cover.webp" alt="صنایع دستی"></div>صنایع دستی</div>
-    <div class="story"><div class="circle"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRFzfHj0ljSt8gxJkMrIeMeCFBp1EnB45CDK7SGTUlg&s=10" alt="هدیه‌ها"></div>هدیه‌ها</div>
-    <div class="story"><div class="circle"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPg5o1GsZXaaMu00rjQjpRSyRQT8X9sRNxdpxKFMs-A&s=10" alt="تنقلات"></div>تنقلات</div>
-    <div class="story"><div class="circle"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjk4zgP0EIHmviURk4ap81_ytRQExuRjCcll-VUCmFtQ&s=10" alt="سوغاتی"></div>سوغاتی</div>
-    <div class="story"><div class="circle"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZtb-6OGOtoOdGYZRAAYNPgTVKh3mZm9rsPgM3O57mzA&s=10" alt="لوازم خودرو"></div>لوازم خودرو</div>
-  </div>
+        <h2 id="cityName">نام شهر</h2>
 
-  <div class="promo"><span class="tag">ویژه</span> تا ۱۵٪ تخفیف محصول + ۵۰٬۰۰۰ تومان تخفیف ارسال</div>
+        <h1 id="temperature">-- °C</h1>
 
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://statics.basalam.com/public-280/photo/explore/ZjJN2/11-14/JlDEMIPt0HmoZZRdLeuob9lb1DeGlqlE5djwcchON23YFzPVDb.webp" alt=""></div>
-      <div class="swiper-slide"><img src="https://statics.basalam.com/public-278/photo/explore/B1w2MO/11-10/2HwJ63ldYIydy1HlEwCRf3kMxfvnBq0kF9Tal0QJSgECjUpzum.webp" alt=""></div>
-      <div class="swiper-slide"><img src="https://statics.basalam.com/public-276/photo/explore/B1w2MO/11-07/bYeKr0woJCj8WJVgbOTkY85Okx1Qic273aM6UOWX1DEQ6zieKD.webp" alt=""></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <div class="box cats">
-    <div class="cat"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxsg-lz3SyDUVZL0YOdQT-vR0EG19kQa4kjGTYydWfQz_nbKdU-yfzJlk&s=10" alt=""></div>تخفیف‌ها</div>
-    <div class="cat"><span class="badge">با تخفیف</span><div class="icon"><img src="https://www.beytoote.com/images/stories/mode/girl3-autumn2-set6.jpg" alt=""></div>پوشاک پاییزی</div>
-    <div class="cat"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKzR7QCtu3TgnyVDUSXe8ozB-DgS_nw8Op_vVpKMeivQ&s=10" alt=""></div>لوازم آشپزخانه</div>
-    <div class="cat"><span class="badge">قسطی</span><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT14ifUZwDl-lRm-t7Z910rLo4vf52gJ7n-2k82v4EK_G4D7MPTWeYwa2M&s=10" alt=""></div>لوازم آرایشی</div>
-    <div class="cat"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JSOyxqk_KCiJY7aI4khHkPjszXdFUvOzey5ModUeEg&s=10" alt=""></div>خوراکی</div>
-    <div class="cat"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRAPqVp6SRjOFqulDzug8Hm2UUhPV7LBDxm62_MGvOcQ&s=10" alt=""></div>هدیه</div>
-    <div class="cat"><div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlH5sO8vWm9kq31kVWnqV4TvSh1Inb0msLmBiX8gysSQ&s" alt=""></div>طلا قسطی</div>
-    <div class="cat"><div class="icon"><img src="https://statics.basalam.com/public-203/admin/yDBE2/06-03/BxFDkgO6IogN0PrbaYTrNXdeUV2JHoDRIeopIUIPSSFFUA7SGs.SVG" alt=""></div>همه</div>
-  </div>
-
-  <div class="box">
-    <div class="sec-head">
-      <div><b>محبوب‌ترین پوشاک</b><small>کد تخفیف: abc12</small></div>
-      <a href="#">مشاهده همه</a>
+        <p id="description">وضعیت آب و هوا</p>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQphYqCOZ6CKBwrz_heg0ssJjhydrp3flZlOVxkT77PaQ&s=10" alt=""></div>
-        <div class="t">پیراهن مشکی</div>
-        <div class="s">اصفهان | برند ارجینال</div>
-        <div class="s">امتیاز ۴٫۴ (۲۴ تجربه)</div>
-        <div class="s"><span class="off">۱۵٪</span><span class="old">۳۷۹٬۰۰۰</span></div>
-        <div class="p">۳۲۲٬۱۵۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgHz0m6ScX_j7jfI3xWBstLy9JVeFXy4mj4ROk-ftsYg&s=10" alt=""></div>
-        <div class="t">عینک پلنگی مستطیلی</div>
-        <div class="s">شیراز | فروشگاه عینک</div>
-        <div class="s">امتیاز ۵ (۲ تجربه)</div>
-        <div class="s"><span class="off">۵۰٪</span><span class="old">۷۵۸٬۰۰۰</span></div>
-        <div class="p">۳۷۹٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhZhhyzx5bTW7ZH3e80YWGChX4KoeblILQXZXV9l3pw&s=10" alt=""></div>
-        <div class="t">شال بافت زمستانی</div>
-        <div class="s">تبریز | بافتنی نمونه</div>
-        <div class="s">امتیاز ۴٫۷ (۵۸ تجربه)</div>
-        <div class="s"><span class="off">۲۰٪</span><span class="old">۴۵۰٬۰۰۰</span></div>
-        <div class="p">۳۶۰٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNntM2p3Xb_aH374AwWPt8mPBP5SAYZZXDGjS82wYmtw&s=10" alt=""></div>
-        <div class="t">کلاه بافت ساده</div>
-        <div class="s">رشت | دست‌باف رشت</div>
-        <div class="s">امتیاز ۴٫۵ (۳۱ تجربه)</div>
-        <div class="s"><span class="off">۱۰٪</span><span class="old">۲۰۰٬۰۰۰</span></div>
-        <div class="p">۱۸۰٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHi1fi1YX6KTa0zVZDIApUDu3Fr48bMnOd928Vj5RbEw&s=10" alt=""></div>
-        <div class="t">دستکش چرم زنانه</div>
-        <div class="s">تهران | چرم آرین</div>
-        <div class="s">امتیاز ۴٫۸ (۶۶ تجربه)</div>
-        <div class="s"><span class="off">۲۵٪</span><span class="old">۵۸۰٬۰۰۰</span></div>
-        <div class="p">۴۳۵٬۰۰۰ تومان</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="box">
-    <div class="sec-head">
-      <div><b>خوراکی‌ها</b><small>کد تخفیف: xyz34</small></div>
-      <a href="#">مشاهده همه</a>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmdy6uHZ48OJdp4ceZ82PhHICVdXpbjfLcIUyUYTzdQ&s=10" alt=""></div>
-        <div class="t">پسته اکبری خام ۵۰۰ گرم</div>
-        <div class="s">کرمان | باغ نمونه</div>
-        <div class="s">امتیاز ۴٫۸ (۹۱ تجربه)</div>
-        <div class="s"><span class="off">۱۰٪</span><span class="old">۶۵۰٬۰۰۰</span></div>
-        <div class="p">۵۸۵٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6gXGWaghyv0eZth6IC9u8aRHA8tjKswlgXmtcn2VZaw&s=10" alt=""></div>
-        <div class="t">عسل طبیعی کوهی ۱ کیلویی</div>
-        <div class="s">سبلان | زنبورداری</div>
-        <div class="s">امتیاز ۴٫۶ (۸۵ تجربه)</div>
-        <div class="s"><span class="off">۱۲٪</span><span class="old">۴۵۰٬۰۰۰</span></div>
-        <div class="p">۳۹۶٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFoPVqMfOmc8orrnECeK52BqO-KR8z2EDDpXfeQjq6kg&s=10" alt=""></div>
-        <div class="t">زعفران نگین ۲ گرمی</div>
-        <div class="s">مشهد | زعفران نمونه</div>
-        <div class="s">امتیاز ۴٫۹ (۲۰۰ تجربه)</div>
-        <div class="s"><span class="off">۸٪</span><span class="old">۲۵۰٬۰۰۰</span></div>
-        <div class="p">۲۳۰٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0WRsV7Yv4PTbIDtT0RNwg-oBdVeAQ34HGdOf3GZZGAw&s=10" alt=""></div>
-        <div class="t">خرمای مضافتی ۱ کیلویی</div>
-        <div class="s">بم | نخلستان</div>
-        <div class="s">امتیاز ۴٫۷ (۷۷ تجربه)</div>
-        <div class="s"><span class="off">۱۵٪</span><span class="old">۳۲۰٬۰۰۰</span></div>
-        <div class="p">۲۷۲٬۰۰۰ تومان</div>
-      </div>
-
-      <div class="card">
-        <div class="pic"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT11n6RHS-07SlmHkzuW67seUMUlCZ86v8GFECIusFKAQ&s=10" alt=""></div>
-        <div class="t">گردو پوست کنده ۵۰۰ گرم</div>
-        <div class="s">تویسرکان | باغ گردو</div>
-        <div class="s">امتیاز ۴٫۶ (۴۰ تجربه)</div>
-        <div class="s"><span class="off">۵٪</span><span class="old">۴۲۰٬۰۰۰</span></div>
-        <div class="p">۳۹۹٬۰۰۰ تومان</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="footer">
-  <div class="container">
-
-    <div class="foot-cols">
-      <div>
-        <h4>بازار من</h4>
-        <a href="#">درباره ما</a>
-        <a href="#">تماس با ما</a>
-        <a href="#">فرصت‌های شغلی</a>
-      </div>
-      <div>
-        <h4>پشتیبانی</h4>
-        <a href="#">سوالات متداول</a>
-        <a href="#">پیگیری سفارش</a>
-        <a href="#">مرجوعی کالا</a>
-      </div>
-      <div>
-        <h4>خرید و فروش</h4>
-        <a href="#">راهنمای خرید</a>
-        <a href="#">باز کردن غرفه</a>
-        <a href="#">قوانین</a>
-      </div>
-      <div>
-        <h4>ما رو در شبکه‌های اجتماعی دنبال کن</h4>
-        <div class="social"><span>اینستاگرام</span><span>تلگرام</span><span>لینکدین</span></div>
-
-        <h4>ایمیلت رو وارد کن تا از تخفیف‌ها باخبر بشی</h4>
-        <div class="mail">
-          <input type="text" placeholder="ایمیل">
-          <button type="button">ارسال</button>
-        </div>
-      </div>
-    </div>
-
-    
-    
-
-    <div class="about">
-      <h5>بازار من؛ جایی برای خرید از آدم‌های واقعی</h5>
-      <p>اینجا می‌تونی از غرفه‌دارهای سراسر کشور خرید کنی، باهاشون چت کنی و سفارشت رو درِ خونه تحویل بگیری.</p>
-    </div>
-
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper('.mySwiper', {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
