@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — Glass UI</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <script src="script.js" defer></script>
+  <main class="app">
+    <section class="history-panel glass" aria-label="Calculation history">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow"></p>
+          <h1>History</h1>
+        </div>
+        <button class="text-button" id="clearHistory" type="button">Clear all</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <div class="empty-state">
+          <span class="empty-icon">↗</span>
+          <p>Your calculations will appear here.</p>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <span class="status-dot"></span>
+        <span>Ready when you are</span>
+      </div>
+    </section>
+
+    <section class="calculator glass" aria-label="Calculator">
+      <header class="calc-header">
+        <div class="brand-mark" aria-hidden="true">✳</div>
+        <span class="brand-name">Calculator</span>
+        <button class="theme-button" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">☾</span>
+        </button>
+      </header>
+
+      <div class="display" aria-live="polite">
+        <div class="expression" id="expression">&nbsp;</div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <div class="keys" id="keys">
+        <button class="key utility" data-action="clear" type="button">AC</button>
+        <button class="key utility" data-action="sign" type="button">+/−</button>
+        <button class="key utility" data-action="percent" type="button">%</button>
+        <button class="key operator" data-op="/" type="button" aria-label="Divide">÷</button>
+
+        <button class="key number" data-digit="7" type="button">7</button>
+        <button class="key number" data-digit="8" type="button">8</button>
+        <button class="key number" data-digit="9" type="button">9</button>
+        <button class="key operator" data-op="*" type="button" aria-label="Multiply">×</button>
+
+        <button class="key number" data-digit="4" type="button">4</button>
+        <button class="key number" data-digit="5" type="button">5</button>
+        <button class="key number" data-digit="6" type="button">6</button>
+        <button class="key operator" data-op="-" type="button" aria-label="Subtract">−</button>
+
+        <button class="key number" data-digit="1" type="button">1</button>
+        <button class="key number" data-digit="2" type="button">2</button>
+        <button class="key number" data-digit="3" type="button">3</button>
+        <button class="key operator" data-op="+" type="button" aria-label="Add">+</button>
+
+        <button class="key utility" data-action="backspace" type="button" aria-label="Delete last digit">⌫</button>
+        <button class="key number" data-digit="0" type="button">0</button>
+        <button class="key number" data-action="decimal" type="button">.</button>
+        <button class="key equals" data-action="equals" type="button">=</button>
+      </div>
+      <footer class="calc-footer">
+        <span>PRECISION, SIMPLIFIED</span>
+        <span class="keyboard-hint">Keyboard supported <kbd>↵</kbd></span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
