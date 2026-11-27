@@ -1,0 +1,21 @@
+{
+  "tasks": [
+    {
+      "title": "TEST",
+      "description": "TEST",
+      "priority": "medium",
+      "date": "2026-11-10",
+      "completed": true,
+      "id": "lvNjL9cRA7o"
+    },
+    {
+      "title": "NEW TASK",
+      "description": "NEW TASK",
+      "priority": "medium",
+      "date": "2026-11-01",
+      "completed": true,
+      "id": "37R1Vd84TMg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
