@@ -272,3 +272,131 @@
 //     }
 //     console.log(i);
 // }
+
+/* OOP IN JS */
+// class Student{
+//     #score
+
+//     get getScore(){
+//         return this.#score;
+//     }
+//     set setScore(value){
+//         this.#score = value;
+//     }
+// }
+
+// let mamad = new Student();
+// mamad.setScore = 20;
+// console.log(mamad.getScore);
+
+// class BankAccount{
+//     #balance
+
+//     set transferMoney(value){
+//         this.#balance -= value;
+//     }
+//     set buyProduct(value){
+//         this.#balance -= value;
+//     }
+//     set cashDraw(value){
+//         this.#balance -= value;
+//     }
+//     set deposit(value){
+//         this.#balance += value;
+//     }
+
+//     get getBalance(){
+//         return this.#balance;
+//     }
+// }
+
+// let mamadAccount = new BankAccount();
+
+/* Inheritance */
+// class Human{
+//     constructor(fullName, email){
+//         this.fullName = fullName;
+//         this.email = email;
+//     }
+//     fullName
+//     email
+
+//     move(){}
+// }
+
+// class Manager extends Human{
+//     constructor(companyName, fullName, email){
+//         super(fullName, email);
+//         this.companyName = companyName;
+//     }
+//     companyName
+//     isBoss = true
+// }
+
+// let sadeghi = new Manager("MFT", "Sadeghi", 'sadeghi@gmail.com');
+// console.log(sadeghi);
+
+/* Overriding */
+// class Product{
+//     title
+//     price
+
+//     buyProduct(){
+//         console.log("Buy a Product");
+//     }
+// }
+
+// class Mobile extends Product{
+//     buyProduct(){
+//         console.log("Buy a Mobile");
+//     }
+// }
+
+// let mobile = new Mobile();
+// mobile.buyProduct();
+
+
+// class FilimoPlan extends Product{
+//     buyProduct(){
+//         console.log("Buy a Plan");
+//     }
+// }
+
+// let plan = new FilimoPlan();
+// plan.buyProduct();
+
+/* Abstraction */
+// class Car{
+//     jaragheh(){
+
+//     }
+
+//     #addFuel(){
+
+//     }
+    
+//     start(){
+//         this.#addFuel();
+
+//         this.#jaragheh();
+
+//         console.log("Car Started!");
+//     }
+// }
+
+/* Axios */
+// axios.post('https://jsonplaceholder.typicode.com/posts', {
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+// }, {
+//     headers: {
+//         'Content-Type': 'application/json',
+//     }
+// })
+//     .then(response => {
+//         console.log(response.data);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
