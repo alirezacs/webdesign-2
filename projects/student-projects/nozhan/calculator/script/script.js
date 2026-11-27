@@ -29,7 +29,7 @@ class Calculator {
                 else if (value === "=") {
                     if (this.operator !== null) {
                         let secondNum = Number(this.number);
-                        let result = this.calculate(second);
+                        let result = this.calculate(secondNum);
 
                         this.number = String(result);
                         this.operator = null;
@@ -60,17 +60,17 @@ class Calculator {
 
         class plusCalculator extends Calculator {
             calculate(second) {
-                if (this.operator === "+") return this.first + second;
-                if (this.operator === "-") return this.first - second;
-                if (this.operator === "*") return this.first * second;
+                if (this.operator === "+") return this.firstNum + second;
+                if (this.operator === "-") return this.firstNum - second;
+                if (this.operator === "*") return this.firstNum * second;
                 if (this.operator === "/") {
-                    return second === 0 ? "Error" : this.first / second;
+                    return second === 0 ? "Error" : this.firstNum / second;
                 }
             }
         }
 
         let screen = document.getElementById("screen");
-        let calculator = new AdvancedCalculator();
+        let calculator = new plusCalculator();
 
         document.querySelector(".buttons").addEventListener("click", function(event) {
             if (event.target.tagName === "BUTTON") {
