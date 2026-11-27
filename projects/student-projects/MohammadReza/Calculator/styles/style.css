@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@font-face {
+    font-family: "digit-font";
+    src: url(../fonts/DS-DIGIT.TTF)format(truetype);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222222;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.calculator {
+    width: 340px;
+    padding: 22px;
+    border-radius: 32px;
+    background: #40d6c4;
+    box-shadow:
+        0 20px 50px rgba(39, 190, 174, 0.20),
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.brand {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #123b38;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff6b00;
+    box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.15);
+}
+
+.display {
+    font-family: "digit-font";
+    min-height: 115px;
+    background: #b8fff3;
+    border-radius: 22px;
+    padding: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    overflow: hidden;
+}
+
+.expression {
+    height: 25px;
+    color: #4b7771;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.result {
+    font-size: 38px;
+    font-weight: bold;
+    color: #153c38;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+}
+
+.btn {
+    height: 62px;
+    border: none;
+    border-radius: 19px;
+    font-size: 21px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.btn:active {
+    transform: scale(0.93);
+}
+
+.number {
+    background: #15191a;
+    color: #ffffff;
+    box-shadow: 0 5px 0 #0c0f10;
+}
+
+.utility {
+    background: #202526;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.operator {
+    background: #ff6b00;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 5px 0 #d94f00;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.equal {
+    background: #ff6b00;
+}
+
+.calculator-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #174b45;
+    opacity: 0.8;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: calc(100% - 30px);
+        padding: 18px;
+    }
+
+    .btn {
+        height: 58px;
+        border-radius: 16px;
+    }
+}

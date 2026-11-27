@@ -1,0 +1,649 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+
+    :root {
+        --text: #f4f7ff;
+        --muted: #9eaccb;
+        --line: rgba(255, 255, 255, .12);
+        --glass: rgba(16, 28, 61, .58);
+        --cyan: #8cecff;
+        --purple: #a99bff
+    }
+
+    body {
+        min-height: 100vh;
+        color: var(--text);
+        font-family: 'DM Sans', sans-serif;
+        background: radial-gradient(ellipse at 15% 15%, #243c78 0%, transparent 38%), radial-gradient(ellipse at 85% 75%, #39256e 0%, transparent 36%), linear-gradient(135deg, #070d20, #101b3b 55%, #090f25);
+        overflow-x: hidden
+    }
+
+    body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: .7;
+        background-image: radial-gradient(2px 2px at 10% 20%, #fff 50%, transparent 55%), radial-gradient(1px 1px at 25% 75%, #c7e8ff 50%, transparent 55%), radial-gradient(2px 2px at 80% 30%, #fff 50%, transparent 55%), radial-gradient(1px 1px at 65% 60%, #fff 50%, transparent 55%), radial-gradient(1px 1px at 92% 82%, #c7e8ff 50%, transparent 55%), radial-gradient(1px 1px at 42% 42%, #fff 50%, transparent 55%);
+        background-size: 340px 280px;
+        animation: twinkle 5s ease-in-out infinite alternate;
+        z-index: -1
+    }
+
+    @keyframes twinkle {
+        from {
+            opacity: .35;
+            transform: translateY(0)
+        }
+
+        to {
+            opacity: .85;
+            transform: translateY(-8px)
+        }
+    }
+
+    .aurora {
+        position: fixed;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: .2;
+        pointer-events: none;
+        z-index: -1;
+        animation: float 12s ease-in-out infinite alternate
+    }
+
+    .aurora.one {
+        background: #397dff;
+        top: -180px;
+        left: -100px
+    }
+
+    .aurora.two {
+        background: #8b4dff;
+        right: -180px;
+        bottom: -150px;
+        animation-delay: -5s
+    }
+
+    @keyframes float {
+        to {
+            transform: translate(70px, 50px) scale(1.15)
+        }
+    }
+
+    .page {
+        width: min(1120px, 92%);
+        margin: auto;
+        padding: 34px 0 60px
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px
+    }
+
+    .brand {
+        font: 800 22px Manrope, sans-serif;
+        letter-spacing: 5px
+    }
+
+    .brand span {
+        color: var(--cyan)
+    }
+
+    .top-note {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 2px
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 38px
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: var(--cyan);
+        font-weight: 700;
+        margin-bottom: 18px
+    }
+
+    h1 {
+        font: 800 clamp(34px, 6vw, 66px)/1.1 Manrope, sans-serif;
+        letter-spacing: -2px;
+        background: linear-gradient(100deg, #fff 15%, #9ceaff 48%, #b8a5ff 85%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent
+    }
+
+    .subtitle {
+        color: var(--muted);
+        font-size: 15px;
+        margin-top: 16px
+    }
+
+    .search-wrap {
+        max-width: 690px;
+        margin: 34px auto 14px;
+        padding: 8px;
+        display: flex;
+        gap: 8px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, .08);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 18px 60px rgba(0, 0, 0, .22);
+        transition: .3s
+    }
+
+    .search-wrap:focus-within {
+        border-color: rgba(140, 236, 255, .65);
+        box-shadow: 0 0 0 4px rgba(140, 236, 255, .08), 0 18px 60px rgba(0, 0, 0, .25)
+    }
+
+    .search-symbol {
+        font-size: 25px;
+        color: var(--cyan);
+        padding: 7px 8px 7px 12px
+    }
+
+    #cityInput {
+        flex: 1;
+        min-width: 0;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        color: white;
+        font: 15px 'DM Sans', sans-serif
+    }
+
+    #cityInput::placeholder {
+        color: #8c9abb
+    }
+
+    #searchButton {
+        border: 0;
+        border-radius: 12px;
+        padding: 0 23px;
+        background: linear-gradient(110deg, #76dfff, #9d8cff);
+        color: #101a38;
+        font-weight: 800;
+        cursor: pointer;
+        transition: .25s
+    }
+
+    #searchButton:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1)
+    }
+
+    #searchButton:disabled {
+        opacity: .6;
+        cursor: wait;
+        transform: none
+    }
+
+    .hint {
+        font-size: 12px;
+        color: #8190b3;
+        text-align: center;
+        min-height: 20px
+    }
+
+    .demo-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 22px auto 0
+    }
+
+    .demo-title {
+        width: 100%;
+        text-align: center;
+        color: #8190b3;
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 2px
+    }
+
+    .demo-button {
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 9px 15px;
+        background: rgba(255, 255, 255, .07);
+        color: #eaf2ff;
+        font: 600 12px 'DM Sans', sans-serif;
+        cursor: pointer;
+        transition: .25s
+    }
+
+    .demo-button:hover {
+        transform: translateY(-3px);
+        background: rgba(140, 236, 255, .15);
+        border-color: var(--cyan)
+    }
+
+    .demo-button.reset {
+        color: #b8c4df
+    }
+
+    .city-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 12px auto 0;
+        max-width: 700px
+    }
+
+    .city-option {
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 8px 14px;
+        background: rgba(255, 255, 255, .07);
+        color: #dce8ff;
+        cursor: pointer;
+        font-size: 12px
+    }
+
+    .city-option:hover {
+        background: rgba(140, 236, 255, .15);
+        border-color: var(--cyan)
+    }
+
+    .weather-panel {
+        max-width: 850px;
+        margin: 42px auto 0;
+        display: none;
+        animation: rise .7s ease both
+    }
+
+    .weather-panel.visible {
+        display: block
+    }
+
+    @keyframes rise {
+        from {
+            opacity: 0;
+            transform: translateY(22px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    .current-card,
+    .detail-card,
+    .forecast-card,
+    .sun-times {
+        background: linear-gradient(135deg, rgba(255, 255, 255, .105), rgba(255, 255, 255, .035));
+        border: 1px solid var(--line);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 55px rgba(0, 0, 0, .16)
+    }
+
+    .current-card {
+        border-radius: 26px;
+        padding: 30px 34px;
+        position: relative;
+        overflow: hidden
+    }
+
+    .current-card:after {
+        content: "";
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        right: -90px;
+        top: -130px;
+        border-radius: 50%;
+        background: rgba(116, 199, 255, .12);
+        filter: blur(12px)
+    }
+
+    .current-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        position: relative;
+        z-index: 1
+    }
+
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--cyan);
+        font-weight: 700;
+        margin-bottom: 12px
+    }
+
+    .city-name {
+        font: 700 clamp(25px, 4vw, 38px) Manrope, sans-serif
+    }
+
+    .country-name {
+        color: var(--muted);
+        margin-top: 5px;
+        font-size: 14px
+    }
+
+    .condition {
+        margin-top: 20px;
+        color: #d7e6ff;
+        font-size: 15px
+    }
+
+    .temperature-block {
+        display: flex;
+        align-items: center;
+        gap: 14px
+    }
+
+    .main-icon {
+        font-size: clamp(42px, 7vw, 68px);
+        filter: drop-shadow(0 8px 18px rgba(140, 220, 255, .22));
+        animation: iconFloat 4s ease-in-out infinite
+    }
+
+    @keyframes iconFloat {
+        50% {
+            transform: translateY(-8px)
+        }
+    }
+
+    .temperature {
+        font: 600 clamp(55px, 9vw, 82px)/1 Manrope, sans-serif;
+        letter-spacing: -5px
+    }
+
+    .temperature sup {
+        font-size: 24px;
+        vertical-align: top;
+        letter-spacing: 0;
+        margin-left: 4px;
+        color: #c5d7f4
+    }
+
+    .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 14px
+    }
+
+    .detail-card {
+        padding: 19px;
+        border-radius: 17px;
+        transition: .25s
+    }
+
+    .detail-card:hover,
+    .forecast-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(140, 236, 255, .35)
+    }
+
+    .detail-title {
+        font-size: 9px;
+        letter-spacing: 1.8px;
+        color: var(--muted);
+        margin-bottom: 10px
+    }
+
+    .detail-value {
+        font: 700 21px Manrope, sans-serif
+    }
+
+    .forecast-section {
+        margin-top: 34px
+    }
+
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 25px 2px 14px
+    }
+
+    .section-heading h3 {
+        font: 700 19px Manrope, sans-serif
+    }
+
+    .section-heading span {
+        font-size: 9px;
+        letter-spacing: 2px;
+        color: var(--muted)
+    }
+
+    .hourly-list {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 9px
+    }
+
+    .forecast-card {
+        text-align: center;
+        border-radius: 16px;
+        padding: 15px 7px;
+        transition: .25s
+    }
+
+    .forecast-time {
+        font-size: 11px;
+        color: var(--muted)
+    }
+
+    .forecast-icon {
+        font-size: 23px;
+        margin: 12px 0
+    }
+
+    .forecast-temp {
+        font-weight: 700;
+        font-size: 15px
+    }
+
+    .daily-list {
+        display: grid;
+        gap: 8px
+    }
+
+    .daily-row {
+        display: grid;
+        grid-template-columns: 1.2fr .7fr 1fr .6fr;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 17px;
+        border-radius: 13px;
+        background: rgba(255, 255, 255, .055);
+        border: 1px solid rgba(255, 255, 255, .07);
+        font-size: 13px
+    }
+
+    .daily-day {
+        font-weight: 700
+    }
+
+    .daily-condition {
+        color: var(--muted)
+    }
+
+    .daily-range {
+        text-align: right;
+        font-weight: 600
+    }
+
+    .daily-icon {
+        text-align: center;
+        font-size: 19px
+    }
+
+    .sun-times {
+        display: flex;
+        justify-content: space-around;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 18px;
+        border-radius: 16px;
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 13px
+    }
+
+    .sun-times strong {
+        color: white;
+        margin-left: 5px
+    }
+
+    .updated {
+        text-align: center;
+        color: #7483a7;
+        font-size: 11px;
+        margin-top: 18px
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 60px;
+        color: #7786a8;
+        font-size: 11px;
+        letter-spacing: 1px
+    }
+
+    #status {
+        margin: 12px auto 0;
+        text-align: center;
+        color: #ffd4a1;
+        font-size: 13px;
+        min-height: 20px
+    }
+
+    .particles {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 3
+    }
+
+    .particle {
+        position: absolute;
+        top: -30px;
+        color: #dff7ff;
+        opacity: .65;
+        animation: fall linear infinite
+    }
+
+    .forecast-card {
+        transition: all 0.3s ease;
+    }
+
+    .forecast-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(100, 180, 255, 0.8);
+        box-shadow:
+            0 0 15px rgba(70, 150, 255, 0.4),
+            0 0 30px rgba(70, 150, 255, 0.2);
+    }
+
+    .daily-row {
+        transition: all 0.3s ease;
+    }
+
+    .daily-row:hover {
+        transform: translateX(5px);
+        border-color: rgba(100, 180, 255, 0.8);
+        box-shadow:
+            0 0 15px rgba(70, 150, 255, 0.4),
+            0 0 30px rgba(70, 150, 255, 0.2);
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh) translateX(35px);
+            opacity: .1
+        }
+    }
+
+    body[data-weather="rain"] .particle {
+        width: 1px;
+        height: 24px;
+        background: linear-gradient(transparent, #9cdbff);
+        color: transparent
+    }
+
+    body[data-weather="snow"] .particle {
+        font-size: 13px
+    }
+
+    @media(max-width:700px) {
+        .topbar {
+            margin-bottom: 48px
+        }
+
+        .top-note {
+            font-size: 9px;
+            letter-spacing: 1px
+        }
+
+        .detail-grid {
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        .hourly-list {
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .current-card {
+            padding: 24px 20px
+        }
+
+        .daily-row {
+            grid-template-columns: 1fr .5fr 1.2fr
+        }
+
+        .daily-condition {
+            display: none
+        }
+    }
+
+    @media(max-width:430px) {
+        .search-wrap {
+            gap: 3px
+        }
+
+        .search-symbol {
+            padding-left: 7px
+        }
+
+        #searchButton {
+            padding: 0 13px
+        }
+
+        .temperature-block {
+            gap: 5px
+        }
+
+        .temperature {
+            letter-spacing: -3px
+        }
+
+        .current-top {
+            gap: 8px
+        }
+    }
