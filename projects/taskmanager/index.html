@@ -80,7 +80,7 @@
 
   </div>
 
-  <!-- Task Modal -->
+  <!-- Create Task Modal -->
   <div class="modal" id="taskModal">
     <div class="modal-content">
 
@@ -121,7 +121,49 @@
     </div>
   </div>
 
+  <!-- Edit Task Modal -->
+  <div class="modal" id="editTaskModal">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 id="modalTitle">Add New Task</h2>
+        <button id="closeEditModal">&times;</button>
+      </div>
+
+      <form id="editTaskForm">
+
+        <input type="hidden" id="editTaskId">
+
+        <label>Task Title</label>
+        <input type="text" id="editTaskTitle"
+          placeholder="Enter task title" required>
+
+        <label>Description</label>
+        <textarea id="editTaskDescription"
+          placeholder="Task description"></textarea>
+
+        <label>Priority</label>
+        <select id="editTaskPriority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label>Due Date</label>
+        <input type="date" id="editTaskDate">
+
+        <div class="modal-actions">
+          <button type="button" id="editModalCancelBtn">Cancel</button>
+          <button type="submit">Save Task</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.21.1/axios.js" integrity="sha512-qPnrJ5rk/2kGUxG479UCkR577qsI0OW6ZJyIdP32KAoRqs8WhHz3kxOmOPyl+y+oIxnRk8BMtMH0VBdVcKXClw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

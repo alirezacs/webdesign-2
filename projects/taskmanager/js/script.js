@@ -1,9 +1,9 @@
 
-
 const API = "http://localhost:3000/tasks";
 
 const taskList = document.getElementById("taskList");
 const taskModal = document.getElementById("taskModal");
+const editTaskModal = document.getElementById('editTaskModal');
 const taskForm = document.getElementById("taskForm");
 
 let tasks = [];
@@ -18,12 +18,16 @@ document.getElementById("addTaskBtn").onclick = () => {
 };
 
 // Close modal
-function closeModal() {
+function closeModal() {    
   taskModal.classList.remove("show");
+  editTaskModal.classList.remove('show');
 }
 
 document.getElementById("closeModal").onclick = closeModal;
 document.getElementById("cancelBtn").onclick = closeModal;
+
+document.getElementById("closeEditModal").onclick = closeModal;
+document.getElementById("editModalCancelBtn").onclick = closeModal;
 
 // Create Task
 taskForm.addEventListener('submit', e => {
@@ -46,17 +50,21 @@ taskForm.addEventListener('submit', e => {
     createTask(task);
 })
 const createTask = async (task) => {
-    const result = await axios.post("http://localhost:3000/tasks", task);
+    const result = await axios.post("http://localhost:3000/tasks", task);    
     if(result.status === 200 || result.status === 201){
-        alert("Task Created!");
+        Swal.fire({
+            title: 'Task Created',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
         closeModal();
-        document.getElementById('taskTitle').value = '';
-        document.getElementById('taskDescription').value = '';
-        document.getElementById('taskPriority').value = '';
-        document.getElementById('taskDate').value = '';
         getTasks();
     }else{
-        alert("Error In Creating Task!");
+        Swal.fire({
+            title: 'Error In Create Task',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
     }
     
 }
@@ -128,6 +136,100 @@ const deleteTask = async id => {
 
 // Update Task
 const editTask = async id => {
-    console.log(id);
-    
+    // Fetch Task
+    const result = await axios.get(`http://localhost:3000/tasks/${id}`);
+    const task = result.data;
+
+    // Place Data in Fields
+    document.getElementById('editTaskTitle').value = task.title;
+    document.getElementById('editTaskDescription').value = task.description;
+    document.getElementById('editTaskPriority').value = task.priority;
+    document.getElementById('editTaskDate').value = task.date;
+    document.getElementById('editTaskId').value = task.id;
+
+    document.querySelector("#editTaskModal #modalTitle").textContent = "Edit Task";
+    editTaskModal.classList.add("show");
 }
+let editForm = document.getElementById('editTaskForm');
+editForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    
+    let payload = {
+        title: document.getElementById('editTaskTitle').value,
+        description: document.getElementById('editTaskDescription').value,
+        priority: document.getElementById('editTaskPriority').value,
+        date: document.getElementById('editTaskDate').value,
+    }
+
+    let taskId = document.getElementById('editTaskId').value;
+    
+    const result = await axios.put(`http://localhost:3000/tasks/${taskId}`, payload);
+
+    if(result.statusText !== "OK"){
+        alert("Failed to Update Task!");
+        return;
+    }
+
+    Swal.fire({
+        title: 'Task Updated',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+
+    closeModal();
+    getTasks();
+})
+
+// Search Form
+let searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keydown', async e => {
+    let searchText = searchInput.value;
+    
+    const result = await axios.get(API);
+    const tasks = result.data;
+    const searchedTasks = tasks.filter(task =>
+        task.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+    if(searchedTasks.length < 1){
+        taskList.innerText = "Not Found!";
+        return;
+    }
+
+    taskList.innerHTML = '';
+    searchedTasks.map(task => {
+        taskList.innerHTML += `
+            <div class="task-item ${task.completed ? "completed" : ""}">
+
+                <div class="task-info">
+                    <h3>${task.title}</h3>
+
+                    <p>${task.description}</p>
+
+                    <div class="task-meta">
+                    <span class="priority ${task.priority}">
+                        ${task.priority}
+                    </span>
+
+                    <span>📅 ${task.date}</span>
+                    </div>
+                </div>
+
+                <div class="task-actions">
+                    <button onclick="toggleTask('${task.id}')">
+                    ${task.completed ? "↩ Undo" : "✓ Done"}
+                    </button>
+
+                    <button onclick="editTask('${task.id}')">
+                    ✏ Edit
+                    </button>
+
+                    <button class="delete" onclick="deleteTask('${task.id}')">
+                    🗑
+                    </button>
+                </div>
+
+                </div>
+        `
+    })
+})

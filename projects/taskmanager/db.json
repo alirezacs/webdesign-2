@@ -3,18 +3,40 @@
     {
       "title": "TEST",
       "description": "TEST",
-      "priority": "medium",
+      "priority": "low",
       "date": "2026-11-10",
-      "completed": true,
       "id": "lvNjL9cRA7o"
     },
     {
-      "title": "NEW TASK",
-      "description": "NEW TASK",
+      "title": "Updated Task",
+      "description": "Updated Task Desc",
       "priority": "medium",
       "date": "2026-11-01",
-      "completed": true,
       "id": "37R1Vd84TMg"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task",
+      "priority": "high",
+      "date": "2026-12-09",
+      "completed": true,
+      "id": "hdoCJ6cdir4"
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "priority": "low",
+      "date": "22222-02-22",
+      "completed": true,
+      "id": "nW7i4ApcNBE"
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "priority": "high",
+      "date": "2026-11-17",
+      "completed": true,
+      "id": "onW3uvaCHwM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
